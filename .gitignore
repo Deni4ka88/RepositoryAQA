@@ -36,4 +36,4 @@ src/.DS_Store
 /nbdist/
 /.nb-gradle/
 /.factorypath
-/.java-version
+/.java-version.DS_Store
