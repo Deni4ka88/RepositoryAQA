@@ -11,6 +11,14 @@ target/
 *.iws
 *.iml
 *.ipr
+.idea
+.target
+*.iws
+*.iml
+*.ipr
+/out/
+.DS_Store
+src/.DS_Store
 
 ### Eclipse ###
 .apt_generated
