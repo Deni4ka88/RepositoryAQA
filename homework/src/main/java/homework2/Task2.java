@@ -6,7 +6,7 @@ public class Task2 {
         int parentsMoney = 5000;
         int euro = 28;
         int allVasayMoney = vasyaMoney + parentsMoney;
-        double result = allVasayMoney/euro;
+        double result = allVasayMoney / euro;
         System.out.println(result);
     }
 }
