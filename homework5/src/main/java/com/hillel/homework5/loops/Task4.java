@@ -13,6 +13,6 @@ public class Task4 {
             sum += currentNumber % 10;
             currentNumber /= 10;
         }
-        System.out.println("sum "+ i + " = " + sum);
+        System.out.println("number sum "+ i + " = " + sum);
     }
 }
