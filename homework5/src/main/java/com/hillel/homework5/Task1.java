@@ -1,4 +1,4 @@
-package com.hillel.homework5.loops;
+package com.hillel.homework5;
 
 public class Task1 {
     public static void main(String[] args) {
