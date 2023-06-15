@@ -21,15 +21,11 @@ classes/*
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
 *.iws
 *.iml
 *.ipr
-.idea
-.target
+.idea/
+.target/
 *.iws
 *.iml
 *.ipr
