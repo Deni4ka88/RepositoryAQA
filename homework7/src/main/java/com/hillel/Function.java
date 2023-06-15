@@ -35,7 +35,7 @@ public class Function {
                 result = num1 * num2;
                 break;
             default:
-                throw new IllegalArgumentException("unknown operation: " + operation);
+                throw new IllegalArgumentException("Unknown operation: " + operation);
         }
         return result;
     }
