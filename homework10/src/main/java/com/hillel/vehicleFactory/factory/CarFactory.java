@@ -22,6 +22,10 @@ public abstract class CarFactory {
         return price;
     }
 
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public String getBodyType() {
         return bodyType;
     }
@@ -37,4 +41,8 @@ public abstract class CarFactory {
             System.out.println("Brand should be added");
         }
     }
+
+    public abstract int calculateVehiclePrice ();
 }
+
+

@@ -22,7 +22,29 @@ public class GasolineCar extends CarFactory {
         return motorModel;
     }
 
-    //    public void printGasoline(){
-//        System.out.printf("Brand: %1s%n Body: %2s%n Fuel: %3s%n GRM: %4s%n Motor: %5s%n",getBrand(),getBodyType(),getFuelType(),grm,motorModel.printMotor());
-//    }
+    @Override
+    public int calculateVehiclePrice() {
+        int price = getPrice();
+        if (this.mileage > 3000) {
+            int decreasePrice = this.mileage / 3000;
+            for (int i = 0; i < decreasePrice; i++) {
+                price -= price * 0.02;
+                setPrice(price);
+            }
+
+        }
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "GasolineCar:" +
+                " brand = " + getBrand() +
+                " price = " + getPrice() +
+                " body type = " + getBodyType() +
+                " fuel type = " + getFuelType() +
+                " mileage = " + mileage +
+                " motor model = " + motorModel +
+                '.';
+    }
 }

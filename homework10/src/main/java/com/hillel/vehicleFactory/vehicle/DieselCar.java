@@ -14,7 +14,7 @@ public class DieselCar extends CarFactory {
         super(brand, price, bodyType, fuelType);
         this.motor = motor;
         this.mileage = mileage;
-        this.euroStandard = euroStandard;
+        setEuroStandard(euroStandard);
     }
 
     public Motor getMotor() {
@@ -30,14 +30,36 @@ public class DieselCar extends CarFactory {
     }
 
     public void setEuroStandard(int euroStandard) {
-        if (euroStandard < 5){
-            System.out.println("You should passing emission control");
+        if (euroStandard <= 5) {
+            System.out.println("You should passing emission control every 10000 km");
         }
         this.euroStandard = euroStandard;
     }
 
-    //    public void printDieselVehicle() {
-//        System.out.printf("Brand: %1s%n Body: %2s%n Fuel: %3s%n Motor: %4s Euro standard: %d%n", getBrand(), getBodyType(), getFuelType(), motor.printMotor(), 6);
-//        System.out.println();
-//    }
+    @Override
+    public int calculateVehiclePrice() {
+        int price = getPrice();
+        if (this.mileage > 3000) {
+            int decreasePrice = this.mileage / 3000;
+            for (int i = 0; i < decreasePrice; i++) {
+                price -= price * 0.02;
+                setPrice(price);
+            }
+
+        }
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "DieselCar:" +
+                " brand = " + getBrand() +
+                " price = " + getPrice() +
+                " body type = " + getBodyType() +
+                " fuel type = " + getFuelType() +
+                " motor = " + motor +
+                " mileage = " + mileage +
+                " euroSstandard = " + euroStandard +
+                '.';
+    }
 }

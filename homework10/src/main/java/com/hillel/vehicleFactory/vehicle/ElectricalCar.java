@@ -40,8 +40,33 @@ public class ElectricalCar extends CarFactory {
     public Motor getMotor() {
         return motor;
     }
-    //    public void printElectricCar() {
-//        System.out.printf("Brand: %1s%n Body: %2s%n Fuel: %3s%n Model: %4s%n Battery: %d%n Range: %s%n", getBrand(), getBodyType(), getFuelType(), model, battery, maxRange);
-//        System.out.println();
-//    }
+
+    @Override
+    public int calculateVehiclePrice() {
+        int price = getPrice();
+        if (this.mileage > 3000) {
+            int decreasePrice = this.mileage / 3000;
+            for (int i = 0; i < decreasePrice; i++) {
+                price -= price * 0.01;
+                setPrice(price);
+            }
+
+        }
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "ElectricalCar:" +
+                " brand = " + getBrand() +
+                " price = " + getPrice() +
+                " body type = " + getBodyType() +
+                " fuel type = " + getFuelType() +
+                " model = " + model +
+                " battery = " + battery +
+                " maxRange = " + maxRange +
+                " mileage = " + mileage +
+                " motor = " + motor +
+                '.';
+    }
 }

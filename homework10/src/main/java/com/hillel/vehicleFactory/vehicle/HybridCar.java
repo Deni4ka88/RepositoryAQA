@@ -20,8 +20,29 @@ public class HybridCar extends GasolineCar {
         return fuelEfficiency;
     }
 
-    //    public void printHybrid() {
-//        System.out.printf("Brand: %1s%n Body: %2s%n Fuel: %3s%n GRM: %4s%n Motor: %5s%n Range: %6f%n Efficiency: %7f%n", getBrand(), getBodyType(), getFuelType(), getGrm(), motorModel.printMotor(), electricRange, fuelEfficiency);
-//        System.out.println();
-//    }
+    @Override
+    public int calculateVehiclePrice() {
+        int price = getPrice();
+        if (getMileage() > 3000) {
+            int decreasePrice = getMileage() / 3000;
+            for (int i = 0; i < decreasePrice; i++) {
+                price -= price * 0.02;
+                setPrice(price);
+            }
+
+        }
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "HybridCar:" +
+                " brand = " + getBrand() +
+                " price = " + getPrice() +
+                " body type = " + getBodyType() +
+                " fuel type = " + getFuelType() +
+                " electric range = " + electricRange +
+                " fuel efficiency = " + fuelEfficiency +
+                '.';
+    }
 }

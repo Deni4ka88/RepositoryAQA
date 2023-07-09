@@ -50,7 +50,14 @@ public class Motor {
         return quantityElectricMotors;
     }
 
-        //    public String printMotor() {
-//        return String.format("Value: %f%n Power: %d%n Cylinder: %d%n", motorValue, horsePower, cylinderQuantity);
-//    }
+    @Override
+    public String toString() {
+        return "Motor:" +
+                " motor type = " + motorType +
+                " motor value = " + motorValue +
+                " horse power = " + horsePower +
+                " cylinder quantity = " + cylinderQuantity +
+                " quantity electric motors = " + quantityElectricMotors +
+                '.';
+    }
 }
