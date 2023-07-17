@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class MethodForStudents {
 
-    public static String studentData(Scanner scanner) {
-        return scanner.nextLine();
-    }
+//    public static String studentData(Scanner scanner) {
+//        return scanner.nextLine();
+//    }
 
     String lastname;
     String grade;
