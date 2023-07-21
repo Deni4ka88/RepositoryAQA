@@ -1,13 +1,14 @@
 package com.hillel.smartphones.device;
 
 import com.hillel.smartphones.abstractions.Device;
+import com.hillel.smartphones.enums.OS;
 import com.hillel.smartphones.interfaces.Smartphones;
 
 public class Iphones extends Device implements Smartphones {
     int camera;
     boolean faceID;
 
-    public Iphones(int ram, int cpu, String os, int camera, boolean faceID) {
+    public Iphones(int ram, int cpu, OS os, int camera, boolean faceID) {
         super(ram, cpu, os);
         this.camera = camera;
         this.faceID = faceID;

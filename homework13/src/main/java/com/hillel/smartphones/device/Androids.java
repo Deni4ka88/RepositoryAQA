@@ -1,13 +1,14 @@
 package com.hillel.smartphones.device;
 
 import com.hillel.smartphones.abstractions.Device;
+import com.hillel.smartphones.enums.OS;
 import com.hillel.smartphones.interfaces.Smartphones;
 
 public class Androids extends Device implements Smartphones {
     int battery;
     String audioOutput;
 
-    public Androids(int ram, int cpu, String os, int battery, String audioOutput) {
+    public Androids(int ram, int cpu, OS os, int battery, String audioOutput) {
         super(ram, cpu, os);
         this.battery = battery;
         this.audioOutput = audioOutput;

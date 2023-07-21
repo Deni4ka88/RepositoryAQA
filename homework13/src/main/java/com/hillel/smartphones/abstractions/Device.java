@@ -1,11 +1,13 @@
 package com.hillel.smartphones.abstractions;
 
+import com.hillel.smartphones.enums.OS;
+
 public abstract class Device {
     private int ram;
     private int cpu;
-    private String os;
+    private OS os;
 
-    public Device(int ram, int cpu, String os) {
+    public Device(int ram, int cpu, OS os) {
         this.ram = ram;
         this.cpu = cpu;
         this.os = os;
@@ -19,7 +21,7 @@ public abstract class Device {
         return cpu;
     }
 
-    public String getOs() {
+    public OS getOs() {
         return os;
     }
 }

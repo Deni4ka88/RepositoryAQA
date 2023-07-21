@@ -11,9 +11,7 @@ public class StudentsList {
         Scanner scannerList = new Scanner(System.in);
         List<String> studentListAll = new ArrayList<>();
 
-
-
-        int listLength = 1;
+        int listLength = 4;
 
         for (int i = 0; i < listLength; i++) {
             Scanner scanner = new Scanner(System.in);
